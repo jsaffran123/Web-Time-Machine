@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Covid Time Machine</title>
+	<title>Web Time Machine</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="css/site.css">
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
+
 <body>
-				<ul>
-					<a href="2020/index.html"/>
-						<li><h2>Year 0</h2></li>
-					<a href="2021/index.html"/>
-						<li><h2>Year 1</h2></li>
-					<a href="2022/index.html"/>
-						<li><h2>Year 2</h2></li>
-					<a href="2023/index.html"/>	
-						<li><h2>Year 3</h2></li>
-					<a href="2024/index.html"/>
-						<li><h2>Year 4</h2></li>
-					<a href="2025/index.html"/>
-						<li><h2>Year 5</h2></li>
-					<a href="2026/index.html"/>
-						<li><h2>The Future</h2></li>
-			
-				</ul>
-			</div>
+	<div class = "title">
+		<h1>Welcome to the Web Time Machine</h1>
+	</div>
+
+	
+	<h2><p>Click on a decade to see what the world was like back then!</p></h2>
+
+	<div>
+		<button id="navButtonOne" class="navButton">1975</button>
+	</div>
+	
+		<button id="navButtonTwo" class="navButton">1985</button>
+		<button id="navButtonThree" class="navButton">1995</button>
+		<button id="navButtonFour" class="navButton">2005</button>
+		<button id="navButtonFive" class="navButton">2015</button>
+		<button id="navButtonSix" class="navButton">2025</button>
+		<button id="navButtonSeven" class="navButton">2065</button>
+				
+	<script>
+    	$(document).ready(function () {
+      		$('#navButtonOne').click(function () {
+       			 window.location.href = '1975/index.html';
+      		});
+    	});
+		$(document).ready(function () {
+	  		$('#navButtonTwo').click(function () {
+	   			 window.location.href = '1985/index.html';
+	  		});
+		});
+		$(document).ready(function () {
+	  		$('#navButtonThree').click(function () {
+	   			 window.location.href = '1995/index.html';
+	  		});
+		});
+		$(document).ready(function () {
+	  		$('#navButtonFour').click(function () {
+	   			 window.location.href = '2005/index.html';
+	  		});
+		});
+		$(document).ready(function () {
+	  		$('#navButtonFive').click(function () {
+	   			 window.location.href = '2015/index.html';
+	  		});
+		});
+		$(document).ready(function () {
+	  		$('#navButtonSix').click(function () {
+	   			 window.location.href = '2025/index.html';
+	  		});
+		});
+		$(document).ready(function () {
+	  		$('#navButtonSeven').click(function () {
+	   			 window.location.href = '2065/index.html';
+	  		});
+		});
+	</script>
+
+
+
+		
 
 		</section>
 		<nav id="links">
