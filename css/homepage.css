@@ -14,12 +14,6 @@
   letter-spacing: 2px;
 }
 
-#text {
-  color: #c0f6f6;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
 
 .navButton:hover {
   background: linear-gradient(45deg, #9492c0, #7f6f99);
