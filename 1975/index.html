@@ -9,15 +9,38 @@
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
 <body>
-			<h1>1975</h1>
-			<a href="../index.html">
-				<div class="navigation">
-					<h2>Return to the Time Machine</h2></a>
-				</div>
-		
-		<nav id="links">
-			<!-- Put links to other pages (including the homepage) here. -->
-		</nav>
-	</main>
+
+  <header>
+<button id="homeButton" class="navButton" onclick="location.href='../index.html'">
+  <h2>Return to the Time Machine</h2>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Left Column: Text -->
+    <div>
+      <h1>Welcome to Our Page</h1>
+      <p>
+        This is the left column containing descriptive text. You can add as much
+        content here as needed. It supports all standard HTML text elements.
+      </p>
+    </div>
+
+    <!-- Right Column: Video and Image -->
+    <div>
+      <!-- Embedded Video -->
+      <div>
+        <iframe class="w-full h-64" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+
+      <!-- Image -->
+      <img src="https://via.placeholder.com/400x250" alt="Example Image" class="w-full rounded shadow" />
+    </div>
+
+  </main>
 </body>
 </html>
