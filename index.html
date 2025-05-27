@@ -6,12 +6,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="css/site.css">
 	<link rel="stylesheet" type="text/css" href="css/homepage.css">
-	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+	<script type="text/javascript" src="./js/lab.js" defer></script>
 	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
-
 <body>
+		<div id="intro" class="intro-screen">
+		  <p id="introText" class="typing-text"></p>
+		</div>
+		<script>
+			const story = "Time didn’t slow down. It didn’t shatter. It stopped. Completely.\nYou now stand outside the river of time.\nStep carefully. The past will tempt you. The future will test you.\nBut remember—time only stopped because you touched it.";
+			const textElement = document.getElementById("introText");
+			let i = 0;
+		  
+			function typeStory() {
+			  if (i < story.length) {
+				textElement.innerHTML += story.charAt(i) === '\n' ? "<br>" : story.charAt(i);
+				i++;
+				setTimeout(typeStory, 45);
+			  } else {
+				setTimeout(() => {
+				  document.getElementById("intro").style.display = "none";
+				  document.getElementById("cutscene").style.display = "flex";
+		  
+				  setTimeout(() => {
+					document.getElementById("cutscene").style.display = "none";
+					showMainContent();
+				  }, 3000);
+				}, 1000);
+			  }
+			}
+		  
+			function showMainContent() {
+			  document.querySelector(".title").style.display = "block";
+			  document.querySelector(".felx-container").style.display = "block";
+			}
+		  
+			document.addEventListener("DOMContentLoaded", () => {
+			  const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
+		  
+			  if (!hasSeenIntro) {
+				// First time visiting — play intro
+				sessionStorage.setItem("hasSeenIntro", "true");
+				document.querySelector(".title").style.display = "none";
+				document.querySelector(".felx-container").style.display = "none";
+				typeStory();
+			  } else {
+				// Skip intro
+				document.getElementById("intro").style.display = "none";
+				document.getElementById("cutscene").style.display = "none";
+				showMainContent();
+			  }
+			});
+		  </script>		  
+		  
+		<div id="cutscene" class="cutscene" style="display: none;">
+		  <div class="time-portal">
+			<p>Initiating Time Travel...</p>
+		  </div>
+		</div>
+	  
 	<div class = "title">
 		<h1>Welcome to the Web Time Machine</h1>
 	</div>
