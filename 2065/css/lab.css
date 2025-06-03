@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P';
+  background: linear-gradient(135deg, #1e1b2f, #151320);
+  color: #d4aad6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px;
+  text-shadow: 0 0 2px #b57cc4;
+}
+
+h1, h2, h3 {
+  color: #9bd8d8;
+  text-shadow: 0 0 1px #b57cc4, 0 0 3px #9bd8d8;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #b57cc4;
+  box-shadow: 0 0 10px rgba(181, 124, 196, 0.2);
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.navButton {
+  background: linear-gradient(45deg, #66587a, #49395f);
+  size: 16px;
+  color: #c0f6f6;
+  margin: 15px;
+  margin-left: 625px;
+  padding: 14px 32px;
+  font-size: 14px;
+  border: 2px solid #c0f6f6;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(155, 216, 216, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.navButton:hover {
+  background: linear-gradient(45deg, #9492c0, #7f6f99);
+  color: #1e1b2f;
+  box-shadow: 0 0 20px rgba(208, 245, 245, 0.5);
+  transform: scale(1.05);
+}
