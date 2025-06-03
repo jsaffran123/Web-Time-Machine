@@ -1,55 +1,61 @@
+/*Credit for google fonts: https://www.w3schools.com/css/css_font_google.asp*/
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Righteous&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P', cursive;
-  background: linear-gradient(135deg, #1e1b2f, #151320);
-  color: #d4aad6;
+  font-family: 'Righteous', cursive;
+  background: linear-gradient(135deg, #fdf6e3, #f4dcb4);
+  color: #4e3629;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 40px;
-  text-shadow: 0 0 2px #b57cc4;
+  text-shadow: 1px 1px #fff0d1;
 }
 
 h1, h2, h3 {
-  color: #9bd8d8;
-  text-shadow: 0 0 1px #b57cc4, 0 0 3px #9bd8d8;
+  font-family: 'Monoton', cursive;
+  color: #d14900;
+  text-shadow: 2px 2px #ffd700;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: #fff3d6;
   padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #b57cc4;
-  box-shadow: 0 0 10px rgba(181, 124, 196, 0.2);
+  border-radius: 18px;
+  border: 3px dashed #b5651d;
+  box-shadow: 0 0 15px rgba(181, 101, 29, 0.3);
   max-width: 800px;
   width: 100%;
   margin-bottom: 40px;
 }
 
 .navButton {
-  background: linear-gradient(45deg, #66587a, #49395f);
-  color: #c0f6f6;
+  background: linear-gradient(45deg, #e29578, #f4a261);
+  color: #fffbe6;
   margin: 15px;
-  margin-left: 625px;
-  padding: 14px 32px;
-  font-size: 14px;
-  border: 2px solid #c0f6f6;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(155, 216, 216, 0.3);
+  padding: 16px 36px;
+  font-size: 16px;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 4px 10px rgba(78, 54, 41, 0.3);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  font-family: 'Righteous', cursive;
 }
 
-
 .navButton:hover {
-  background: linear-gradient(45deg, #9492c0, #7f6f99);
-  color: #1e1b2f;
-  box-shadow: 0 0 20px rgba(208, 245, 245, 0.5);
-  transform: scale(1.05);
+  background: linear-gradient(45deg, #f6bd60, #e07a5f);
+  color: #4e3629;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 197, 61, 0.6);
 }

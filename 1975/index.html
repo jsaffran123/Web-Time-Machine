@@ -15,32 +15,48 @@
   <h2>Return to the Time Machine</h2>
   </header>
 
-  <!-- Main Content -->
-  <main>
+  <h1>Welcome to the Retro Zone</h1>
 
-    <!-- Left Column: Text -->
-    <div>
-      <h1>Welcome to Our Page</h1>
+  <div class="container main-content">
+    <!-- YouTube Video -->
+    <div class="section">
+      <h2> Featured Video</h2>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+
+    <!-- Text Column -->
+    <div class="section">
+      <h2> Retro Thoughts</h2>
       <p>
-        This is the left column containing descriptive text. You can add as much
-        content here as needed. It supports all standard HTML text elements.
+        Welcome to the synthwave experience. Here we celebrate neon lights, nostalgic pixels, and the magic of 80s-inspired design.
+        This page is just the beginning—stay tuned for interactive art, classic beats, and more vibes from the future past.
       </p>
     </div>
 
-    <!-- Right Column: Video and Image -->
-    <div>
-      <!-- Embedded Video -->
-      <div>
-        <iframe class="w-full h-64" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-      </div>
-
-      <!-- Image -->
-      <img src="https://via.placeholder.com/400x250" alt="Example Image" class="w-full rounded shadow" />
+    <!-- Interactive Graphic Area -->
+    <div class="section">
+      <h2> Interactive Zone</h2>
+      <div id="graphicArea">Interactive Graphic Loading...</div>
     </div>
+  </div>
 
-  </main>
+  <script>
+    // Example animated pixels
+    const graphic = document.getElementById('graphicArea');
+
+    function createPixel() {
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      pixel.style.left = Math.random() * graphic.clientWidth + 'px';
+      pixel.style.top = Math.random() * graphic.clientHeight + 'px';
+      graphic.appendChild(pixel);
+
+      setTimeout(() => {
+        pixel.remove();
+      }, 1000);
+    }
+
+    setInterval(createPixel, 100);
+  </script>
 </body>
 </html>
