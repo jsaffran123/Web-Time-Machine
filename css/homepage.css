@@ -45,30 +45,6 @@ body {
 }
 
 
-.navButton {
-  background: linear-gradient(45deg, #66587a, #49395f);
-  color: #c0f6f6;
-  margin: 15px;
-  margin-left: 625px;
-  padding: 14px 32px;
-  font-size: 14px;
-  border: 2px solid #c0f6f6;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(155, 216, 216, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-
-.navButton:hover {
-  background: linear-gradient(45deg, #9492c0, #7f6f99);
-  color: #1e1b2f;
-  box-shadow: 0 0 20px rgba(208, 245, 245, 0.5);
-  transform: scale(1.05);
-}
-
 .body {
   font-family: 'Press Start 2P', cursive;
   color: #d4aad6;
@@ -92,4 +68,117 @@ h1, h2, h3 {
   max-width: 800px;
   width: 100%;
   margin-bottom: 40px;
+}
+
+#time-banner {
+  width: 100%;
+  background: linear-gradient(to right, #1e1b2f, #2a1d40, #1e1b2f);
+  border-top: 4px solid #9bd8d8;
+  border-bottom: 4px solid #b57cc4;
+  padding: 20px 20px;
+  color: #d4aad6;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px; /* Smaller size to make it fit */
+  box-shadow: 0 0 20px rgba(155, 216, 216, 0.3), 0 0 40px rgba(181, 124, 196, 0.3) inset;
+  position: relative;
+  z-index: 10;
+  line-height: 1.5;
+  overflow-wrap: hidden;
+  word-wrap: break-word;
+}
+
+#time-banner::before,
+#time-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(155, 216, 216, 0.1),
+    rgba(155, 216, 216, 0.1) 4px,
+    rgba(181, 124, 196, 0.2) 4px,
+    rgba(181, 124, 196, 0.2) 8px
+  );
+  z-index: -1;
+}
+
+#time-banner::before {
+  left: 0;
+  border-right: 2px solid #9bd8d8;
+}
+
+#time-banner::after {
+  right: 0;
+  border-left: 2px solid #b57cc4;
+}
+
+.center-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.navButton {
+  background: radial-gradient(circle at 30% 30%, #8a89a5, #4b4765);
+  color: #00f0ff;
+  padding: 16px 30px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    inset -4px -4px 8px rgba(255, 255, 255, 0.2),
+    inset 4px 4px 8px rgba(0, 0, 0, 0.6),
+    0 4px 10px rgba(0, 255, 255, 0.3),
+    0 0 8px rgba(0, 255, 255, 0.4);
+  text-shadow: 0 0 3px #00f0ff, 0 0 5px #00f0ff;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navButton:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset -2px -2px 6px rgba(255, 255, 255, 0.2),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.4),
+    0 6px 15px rgba(0, 255, 255, 0.6),
+    0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+.navButton:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.6),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1),
+    0 2px 6px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 8px #00f0ff; }
+  50% { box-shadow: 0 0 16px #00f0ff; }
+  100% { box-shadow: 0 0 8px #00f0ff; }
+}
+
+.navButton {
+  animation: glowPulse 2s infinite ease-in-out;
 }
