@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Special Elite', monospace;
+  background: #f5f1e6;
+  color: #2b2b2b;
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: #d8cbb5;
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  border-bottom: 2px dashed #555;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: #3d3d3d;
+  margin-top: 0;
+}
+
+
+.navButton {
+  background-color: #a1866f;
+  border: 2px solid #5c4b3b;
+  color: #fff;
+  padding: 10px 18px;
+  font-family: 'Special Elite', monospace;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 0 #5c4b3b;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: #8a6d56;
+}
+
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Event sections */
+.event {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #c4b49c;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.event h2 {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #999;
+  padding-bottom: 5px;
+}
+
+
+.event:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+footer {
+  display: none;
+}
